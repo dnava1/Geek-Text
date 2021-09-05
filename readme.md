@@ -1,11 +1,14 @@
-## Project description
+## Feature description
 
-An API service to support an online web application bookstore which targets a particular niche in technology. Think Thinkgeek meets Barnes & Noble. Geek Text has features such as profile management, book browsing, shopping carts, book details, and more.
+*Book Rating and Commenting*\
+Users can rate AND comment on books they’ve purchased to help others in their selection
 
-## Developers
-Piero Miranda\
-Dayanna Mogollon Lugo\
-Adriana Morales\
-Jorge Mosqueda\
-Daniel Navarro\
-Milton Nelson
+API Actions:
+-	Must be able to create a rating for a book by a user on a 5 star scale with a datestamp
+-	Must be able to create a comment for a book by a user with a datestamp
+-	Must be able to retrieve a list of ratings and comments sorted by highest rating
+-	Must be able to retrieve the average rating for a book
+
+
+## Developer
+TBD
