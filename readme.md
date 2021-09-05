@@ -1,4 +1,4 @@
-## Project description
+## Feature description
 
 *Profile Management*\
 Users can create and maintain their profiles rather than enter in their information each time they order
