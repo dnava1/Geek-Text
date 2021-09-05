@@ -1,11 +1,14 @@
 ## Project description
 
-An API service to support an online web application bookstore which targets a particular niche in technology. Think Thinkgeek meets Barnes & Noble. Geek Text has features such as profile management, book browsing, shopping carts, book details, and more.
+*Profile Management*\
+Users can create and maintain their profiles rather than enter in their information each time they order
+
+API Actions:\
+-	Create a User with username(email), password and optional fields (name, email address, home address)\
+-	Retrieve a User Object and its fields by their username\
+- Update the user and any of their fields except for mail\
+- Create Credit Card that belongs to a User and Retrieve a list of cards for that user
+
 
 ## Developers
-Piero Miranda\
-Dayanna Mogollon Lugo\
-Adriana Morales\
-Jorge Mosqueda\
-Daniel Navarro\
-Milton Nelson
+TBD
