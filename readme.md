@@ -1,12 +1,10 @@
 ## Feature description
 
-Users can manage items in a shopping cart for immediate or future purchase
+Users can see informative and enticing details about a book
 
 API Actions:\
--Create a shopping cart instance for a user. Shopping cart must belong to a user.\
--Update the shopping cart with a book.\
--Retrieve the list of book(s) in the shopping cart.\
--Delete a book from the shopping cart instance for that user.
+-An administrator must be able to create a book with the book ISBN, book name, book description, price, author, genre, publisher , year published and copies sold.\
+-Must be able retrieve a book’s details by the ISBN
 
 ## Developer
 Daniel Navarro
