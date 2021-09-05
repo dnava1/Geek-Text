@@ -1,6 +1,6 @@
 ## Project description
 
-*BOOK BROWSING AND SORTING*
+*BOOK BROWSING AND SORTING*\
 Users will have a simple and enjoyable way to discover new books and Authors and sort results.
 
 API Actions:
