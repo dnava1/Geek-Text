@@ -1,5 +1,5 @@
 ## Feature description
-
+*Shopping Cart*\
 Users can manage items in a shopping cart for immediate or future purchase
 
 API Actions:\
