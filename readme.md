@@ -1,6 +1,6 @@
 ## Feature description
 
-Users can manage items in a shopping cart for immediate or future Purchase\
+Users can manage items in a shopping cart for immediate or future purchase
 
 API Actions:\
 -Create a shopping cart instance for a user. Shopping cart must belong to a user.\
