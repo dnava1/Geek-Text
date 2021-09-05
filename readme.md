@@ -1,5 +1,6 @@
 ## Feature description
 
+*Book Details*
 Users can see informative and enticing details about a book
 
 API Actions:
