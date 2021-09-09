@@ -9,4 +9,4 @@ API Actions:
 - Delete a book from the shopping cart instance for that user.
 
 ## Developer
-TBD
+Piero Miranda
