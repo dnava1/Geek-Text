@@ -11,4 +11,3 @@ API Actions:
 
 
 ## Developers
-Piero Miranda
