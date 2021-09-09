@@ -5,7 +5,7 @@ You will be creating an API Service to support an online web application booksto
 
 ## Developers
 Piero Miranda\
-Dayanna Mogollon Lugo\
+Dayanna Mogollon Lugo:)\
 Adriana Morales\
 Jorge Mosqueda\
 Daniel Navarro\
