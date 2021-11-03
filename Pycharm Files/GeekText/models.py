@@ -1,7 +1,7 @@
 from django.db import models
-
 from django.core.validators import MinValueValidator, MaxValueValidator
-import datetime
+from django.db.models.fields.related import ForeignKey
+from django_filters.filters import NumberFilter
 
 
 class Book(models.Model):
@@ -17,7 +17,7 @@ class Book(models.Model):
 
 
     def __int__(self):
-        return self.isbn
+        return str(self.name)
 
 class Author(models.Model):
     id = models.IntegerField(primary_key=True)
@@ -31,18 +31,47 @@ class Author(models.Model):
     def __int__(self):
         return self.id
 
-
+RATING_CHOICES = {
+    ("1", "1"),
+    ("2", "2"),
+    ("3", "3"), 
+    ("4", "4"), 
+    ("5", "5"),
+}
 
 class Rating(models.Model):
+
+    # class Meta:
+    #     ordering = ['numberOfstars'],
+
     isbn = models.IntegerField(primary_key=True)
     book = models.ForeignKey(Book, on_delete=models.CASCADE, default='')
-    numberOfStars = models.IntegerField(validators=[MinValueValidator(1),
-                                       MaxValueValidator(5)])
-    review = models.CharField(max_length=250, default='')
-    date = models.DateTimeField()
+    numberOfStars = models.IntegerField(choices= RATING_CHOICES, default= '')
+    # numberOfStars = RATING_CHOICES
+    # numberOfStars = models.IntegerField(validators=[MinValueValidator(1),
+    #                                    MaxValueValidator(5)])
+    review = models.TextField(max_length=250, default='', help_text= 'Your review here...')
+    date = models.DateField(auto_now_add=True)
+    image = models.ImageField(blank = True, null = True, upload_to='reviews')
+
+    # def save(self, *args, **kwargs):
+    #     if not self.id:
+    #         self.slug = slugify(self.name)
+    #     super(reviews, self).save(*args, **kwargs)
 
     def __int__(self):
-        return self.isbn
+        return str(self.isbn)
+
+
+    # def rating_sorted(request):
+    #     num_books = Book.objects.all().count()
+
+    #     context = {
+    #         'num_books': num_books,
+    #     }
+        
+    #     return render(request, 'sorted_ratings.html', context = context)
+
 
 
 

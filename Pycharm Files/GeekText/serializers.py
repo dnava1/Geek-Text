@@ -30,6 +30,11 @@ class RatingSerializer(serializers.HyperlinkedModelSerializer):
         model = Rating
         fields = ('__all__')
 
+class RatingSortedSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = Rating
+        fields = ('__all__')
+
 class WishlistSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Wishlist
