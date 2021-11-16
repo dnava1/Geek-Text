@@ -1,17 +1,14 @@
+## Feature description
 
-You will be creating an API Service to support an online web application bookstore which targets a particular niche in technology. The application, named Geek Text (think of Thinkgeek meets Barnes and noble).
+*Book Details*\
+Users can see informative and enticing details about a book
 
-
-#PLEASE DON'T PUSH TO THE MAIN BRANCH, PUSH TO THE TEST BRANCH
-
-
-## Developers
-Piero Miranda\
-Dayanna Mogollon Lugo\
-Adriana Morales\
-Jorge Mosqueda\
-Daniel Navarro\
-Milton Nelson
+API Actions:\
+-An administrator must be able to create a book with the book ISBN, book name, book description, price, author, genre, publisher, year published, and copies sold.\
+-Must be able to retrieve a book's details by the ISBN\
+-An administrator must be able to create an author with first name, last name, biography, and publisher\
+-Must be able to retrieve a list of books associated with an author
 
 
-:)
+## Developer
+Daniel Navarro
