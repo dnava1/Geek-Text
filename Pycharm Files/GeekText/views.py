@@ -37,12 +37,6 @@ class RatingViewSet(viewsets.ModelViewSet):
     queryset = Rating.objects.all().order_by('-numberOfStars')
     serializer_class = RatingSerializer
 
-    # def ratings_sorted(request):
-    #       	querySet = Rating.objects.all()
-    #       	return querySet
-
-
-
 def rating_list(request):
     if request.method == 'GET':
         reviews = Rating.objects.all()
@@ -66,24 +60,6 @@ def rating_list(request):
     elif request.method == 'DELETE':
         count = Rating.objects.all().delete()
         return JsonResponse({'message': '{} reviews were deleted successfully!'.format(count[0])}, status=status.HTTP_204_NO_CONTENT)
-
-    # def rating_sorted(request):
-    #     num_books = Book.objects.all().count()
-
-    #     context = {
-    #         'num_books': num_books,
-    #     }
-        
-    #     return render(request, 'sorted_ratings.html', context = context)
-    
-    # def get_context_data(self, **kwargs):
-    #     context = super().get_context_data(**kwargs)
-
-    #     ratings = Rating.objects.filter(is_active = True)
-
-    #     context["rating"] = ratings
-
-    #     return context
 
 class RatingSortedView(viewsets.ViewSet):
     querySet = Rating.objects.all().order_by('-isbn')
