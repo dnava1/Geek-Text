@@ -29,9 +29,8 @@ class Book(models.Model):
 
     ]
 
-
-
-    isbn = models.IntegerField(primary_key=True)
+    isbn = models.IntegerField(validators=[MinValueValidator(999999999999),
+                                           MaxValueValidator(9999999999999)], unique=True)
     name = models.CharField(max_length=75)
     publisher = models.CharField(max_length=75)
     price = models.IntegerField()

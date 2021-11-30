@@ -30,7 +30,7 @@ class BookViewSet(viewsets.ModelViewSet):
     queryset = Book.objects.all().order_by('isbn')
     serializer_class = BookSerializer
     filter_fields= (
-        'bookAuthor',
+        'bookAuthor', 'isbn',
     )
 
 
