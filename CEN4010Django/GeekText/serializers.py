@@ -5,10 +5,10 @@ from .models import Author
 from .models import Book
 #from .models import Wishlist
 
-#from .models import UserProfile
+from .models import UserProfile
 
 #from .models import Transaction
-#from .models import ShoppingCart
+from .models import ShoppingCart
 
 
 from django.contrib.auth.models import User, Group
@@ -36,17 +36,17 @@ class BookSerializer(serializers.HyperlinkedModelSerializer):
     #    model = Wishlist
     #    fields = ('__all__')
 
-#class UserProfileSerializer(serializers.HyperlinkedModelSerializer):
+class UserProfileSerializer(serializers.HyperlinkedModelSerializer):
 
 
-   # class Meta:
-     #   model = UserProfile
-      #  fields = ('__all__')
+   class Meta:
+       model = UserProfile
+       fields = ('__all__')
 
-#class ShoppingCartSerializer(serializers.HyperlinkedModelSerializer):
-  #  class Meta:
-  #      model = ShoppingCart
-   #     fields = ('__all__')
+class ShoppingCartSerializer(serializers.HyperlinkedModelSerializer):
+   class Meta:
+       model = ShoppingCart
+       fields = ('__all__')
 
 #class TransactionSerializer(serializers.HyperlinkedModelSerializer):
   #  class Meta:
