@@ -7,10 +7,10 @@ from rest_framework.permissions import DjangoModelPermissionsOrAnonReadOnly
 
 
 #from .serializers import RatingSerializer
-#from .serializers import ShoppingCartSerializer
+from .serializers import ShoppingCartSerializer
 #from .serializers import TransactionSerializer
 from .serializers import AuthorSerializer
-#from .serializers import UserProfileSerializer
+from .serializers import UserProfileSerializer
 #from .serializers import WishlistSerializer
 from .serializers import BookSerializer
 
@@ -18,9 +18,9 @@ from .models import Author
 #from .models import Rating
 from .models import Book
 #from .models import Wishlist
-#from .models import UserProfile
+from .models import UserProfile
 #from .models import Transaction
-#from .models import ShoppingCart
+from .models import ShoppingCart
 
 
 
@@ -52,13 +52,13 @@ class AuthorViewSet(viewsets.ModelViewSet):
  #   queryset = Rating.objects.all().order_by('id')
   #  serializer_class = RatingSerializer
 
-#class ShoppingCartViewSet(viewsets.ModelViewSet):
-   # queryset = ShoppingCart.objects.all().order_by('id')
-   # serializer_class = ShoppingCartSerializer
+class ShoppingCartViewSet(viewsets.ModelViewSet):
+   queryset = ShoppingCart.objects.all().order_by('id')
+   serializer_class = ShoppingCartSerializer
 
-#class UserProfileViewSet(viewsets.ModelViewSet):
-   # queryset = UserProfile.objects.all().order_by('username')
-   # serializer_class = UserProfileSerializer
+class UserProfileViewSet(viewsets.ModelViewSet):
+   queryset = UserProfile.objects.all().order_by('username')
+   serializer_class = UserProfileSerializer
 
 
 

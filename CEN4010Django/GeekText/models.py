@@ -44,7 +44,8 @@ class Book(models.Model):
 
     def __int__(self):
        return str(self.isbn)
-
+    def __str__(self):
+        return self.name
 
 
 
@@ -60,32 +61,34 @@ class Book(models.Model):
    # def __int__(self):
       #  return str(self.id)
 
+class UserProfile(models.Model):
+
+   username = models.CharField(max_length=100, unique=True)
+   password = models.CharField(max_length=50)
+   name = models.CharField(max_length=50, blank=True)
+   emailAddress = models.CharField(max_length=50, blank=True, unique=True)
+   homeAddress = models.CharField(max_length=100, blank=True)
+
+
+   def __str__(self):
+       return str(self.username)
+
+
+class ShoppingCart(models.Model):
+    user = models.ForeignKey(UserProfile, on_delete=models.CASCADE, blank=True, null=True)
+    item = models.ForeignKey(Book, on_delete=models.CASCADE, blank= True, null=True)
+    ordered = models.BooleanField(default=False)
+
+    quantity = models.IntegerField(default=1)
+
+    def __str__(self):
+        return f"{self.quantity} of {self.item} for {self.user}"
 
 
 
-#class ShoppingCart(models.Model):
-   # id = models.IntegerField(primary_key=True)
-
-   # books = models.ForeignKey(Book, on_delete=models.CASCADE)
-
-   # def __str__(self):
-      #  return str(self.id)
 
 
 
-
-
-#class UserProfile(models.Model):
-
-   # username = models.CharField(max_length=100, unique=True)
-   # password = models.CharField(max_length=50)
-  #  name = models.CharField(max_length=50, blank=True)
-   # emailAddress = models.CharField(max_length=50, blank=True, unique=True)
-    #homeAddress = models.CharField(max_length=100, blank=True)
-   # shoppingCart = models.ForeignKey(ShoppingCart, on_delete=models.CASCADE)
-
-   # def __str__(self):
-     #   return str(self.username)
 
 
 #class Transaction(models.Model):
