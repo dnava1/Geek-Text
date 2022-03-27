@@ -1,6 +1,6 @@
 ## Project description
 
-An API Service that supports an online web application bookstore which targets a particular niche in technology. The application, named Geek Text (think of Thinkgeek meets Barnes and noble). Using Django for the backend and SQLite for the database. 
+An API Service that supports an online web application bookstore. Uses Python and Django for the backend, Django's REST framework for the API, and SQLite for the database. 
 
 
 
